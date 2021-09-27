@@ -23,6 +23,14 @@ function getClassByRate(vote) {
   }
 }
 
+function getRatingValidation(vote) {
+  let rating = Number(vote)
+  if (isNaN(rating)) {
+    return 0
+  } else {
+    return rating
+  }
+}
 function showMovies(data) {
   const moviesEl = document.querySelector('.movies')
 
@@ -40,7 +48,7 @@ function showMovies(data) {
             <div class="movie__title">${movie.nameRu}</div>
             <div class="movie__category">${movie.genres.map((genre) => ` ${genre.genre}`)}</div>
             
-            <div class="movie__average movie__average--${getClassByRate(movie.rating)}">${movie.rating}</div>
+            <div class="movie__average movie__average--${getClassByRate(movie.rating)}">${getRatingValidation(movie.rating)}</div>
             
             
           </div>
