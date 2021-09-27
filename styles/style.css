@@ -34,7 +34,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.movies {
+.movie {
   width: 240px;
   margin: 10px;
   position: relative;
